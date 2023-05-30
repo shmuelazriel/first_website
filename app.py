@@ -1,9 +1,11 @@
 # app.py
 
 from flask import Flask, render_template, request, redirect, url_for
+from flask_talisman import Talisman
 import sqlite3
 
 app = Flask(__name__)
+Talisman(app, force_https=False)
 
 
 @app.route('/')
