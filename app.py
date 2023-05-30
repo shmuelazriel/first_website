@@ -12,9 +12,11 @@ Talisman(app, force_https=False)
 def home():
     return render_template('index.html')
 
+
 @app.route('/form')
 def form():
     return render_template('form.html')
+
 
 @app.route('/products')
 def products():
@@ -32,6 +34,7 @@ def products():
 
     # Render the products.html template with the fetched products
     return render_template('products.html', products=products)
+
 
 @app.route('/submit_product', methods=['POST'])
 def submit_product():
